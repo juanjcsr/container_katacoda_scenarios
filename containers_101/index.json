@@ -6,27 +6,27 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Escribe un web server sencillo",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Agrega tu app a una imagen de contenedor",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Ejecuta tu imagen",
         "text": "step3.md"
       },
       {
-        "title": "Step 4",
+        "title": "Map de puertos del contenedor",
         "text": "step4.md"
       },
       {
-        "title": "Step 5",
+        "title": "Exponer el puerto mediante un Dockerfile",
         "text": "step5.md"
       },
       {
-        "title": "Step 6",
+        "title": "Ejecuta tu contenedor en tu laptop",
         "text": "step6.md"
       }
     ],
@@ -38,9 +38,15 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "editor-terminal",
+    "uisettings": "go",
+    "uimessage1": "\u001b[36mYour Interactive Bash Terminal.\u001b[m\r\n"
   },
   "backend": {
     "imageid": "ubuntu1804"
-  }
+  },
+  "files": [
+    "hello.go",
+    "Dockerfile"
+  ]
 }
