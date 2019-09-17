@@ -1,0 +1,53 @@
+{
+  "title": "Entendiendo imagenes",
+  "description": "Revisa qué se encuentra dentro de un contenedor y cómo obtener logs y pasar variables",
+  "difficulty": "Beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Escribe un servidor web",
+        "text": "step1.md"
+      },
+      {
+        "title": "Agrega tu app a una imagen",
+        "text": "step2.md"
+      },
+      {
+        "title": "Ejecuta tu imagen",
+        "text": "step3.md"
+      },
+      {
+        "title": "Monta un directorio del host",
+        "text": "step4.md"
+      },
+      {
+        "title": "Pasa variables de ambiente al contenedor",
+        "text": "step5.md"
+      },
+      {
+        "title": "Obten logs del contenedor",
+        "text": "step6.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "makeDir.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uisettings": "go"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  },
+  "files": [
+    "hello.go",
+    "text/response",
+    "Dockerfile"
+  ]
+}
