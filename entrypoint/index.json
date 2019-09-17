@@ -1,0 +1,43 @@
+{
+  "title": "Entrypoint y Comandos",
+  "description": "Especifica el comando que se va a ejecutar al iniciar el contenedor",
+  "difficulty": "Intermediate",
+  "time": "15 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Entrypoints",
+        "text": "step1.md"
+      },
+      {
+        "title": "Commands",
+        "text": "step2.md"
+      },
+      {
+        "title": "Commands",
+        "text": "step3.md"
+      },
+      {
+        "title": "Shell y Exec",
+        "text": "step4.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uisettings": "go"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  },
+  "files": [
+    "Dockerfile",
+    "hello.go"
+  ]
+}
