@@ -82,12 +82,10 @@ func must(err error) {
 
 Filesystem:
 
-cd /root{{execute T2}}
+`mkdir alpine`{{execute T2}}
 
-mkdir alpine{{execute T2}}
+`cd alpine`{{execute T2}}
 
-cd alpine{{execute T2}}
+`curl -o alpine.tar.gz http://dl-cdn.alpinelinux.org/alpine/v3.10/releases/x86_64/alpine-minirootfs-3.10.0-x86_64.tar.gz`{{execute T2}}
 
-curl -o alpine.tar.gz http://dl-cdn.alpinelinux.org/alpine/v3.10/releases/x86_64/alpine-minirootfs-3.10.0-x86_64.tar.gz{{execute T2}}
-
-tar xvf alpine.tar.gz{{execute T2}}
+`tar xvf alpine.tar.gz`{{execute T2}}
