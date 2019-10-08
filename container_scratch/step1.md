@@ -4,12 +4,9 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"log"
 	"os"
 	"os/exec"
-	"path/filepath"
-	"strconv"
 	"syscall"
 )
 
@@ -56,7 +53,6 @@ func parent() {
 
 func child() {
 
-	cg()
 	// Preparamos al hijo para ejecutar nuestro comando
 	cmd := exec.Command(os.Args[2], os.Args[3:]...)
 	cmd.Stdin = os.Stdin
@@ -65,7 +61,7 @@ func child() {
 
 	// syscall para el hostname
 	must(syscall.Sethostname([]byte("container")))
-	must(syscall.Chroot("/home/vagrant/containers/fs/rootfs-ubuntu"))
+	must(syscall.Chroot("/root/alpine"))
 	must(syscall.Chdir("/"))
 	must(syscall.Mount("proc", "proc", "proc", 0, ""))
 	// Aquí ejecutamos el comando:
@@ -83,3 +79,15 @@ func must(err error) {
 }
 
 </pre>
+
+Filesystem:
+
+cd /root{{execute T2}}
+
+mkdir alpine{{execute T2}}
+
+cd alpine{{execute T2}}
+
+curl -o alpine.tar.gz http://dl-cdn.alpinelinux.org/alpine/v3.10/releases/x86_64/alpine-minirootfs-3.10.0-x86_64.tar.gz{{execute T2}}
+
+tar xvf alpine.tar.gz{{execute T2}}
